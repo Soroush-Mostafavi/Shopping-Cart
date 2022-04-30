@@ -1,4 +1,5 @@
 body{
+
   background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
 }
 a{
@@ -20,40 +21,33 @@ a{
 .result {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+ 
   justify-content: center;
   margin-top: 40px;
 }
 
 .cart-itmes{
-   margin-left: 20px;
+   margin-left: 40px;
 
 }
 .chap-conti{
+
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 40px;
-}
-.summer-img{
-width: 300px;
-
-
-
+  margin-top: 100px;
+  margin-left: 15px;
 }
 
-.autmn-img{
-  width: 300px;
- margin-left: 10px;
- 
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+ margin-left: -10px;
 }
-.winter-img{
-  width: 300px;
 
-  margin-top: 20px;
-  
-}
+
 
 .cart-itmes{
   margin-top: 100px;
@@ -62,3 +56,4 @@ width: 300px;
   border-radius: 7%;
 
 }
+

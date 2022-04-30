@@ -11,6 +11,7 @@ import Datasummer from "./datasummer";
 import Grid from "@mui/material/Grid";
 import Header from "./Header";
 
+
 function App() {
   const [cartItemsone, setCartItemsone] = useState([]);
   const [cartItemstwo, setCartItemstwo] = useState([]);
@@ -101,10 +102,13 @@ function App() {
 
   return (
     <Router>
-   <Grid sm={12} md={12}><Header/> </Grid>
-        
+     
+
+      
+     <Header/>
+
       <Grid container spacing={2}>
-        <Grid sm={11} md={8}>
+        <Grid sm={12} md={8}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route
@@ -142,7 +146,7 @@ function App() {
             />
           </Routes>
         </Grid>
-        <Grid sm={12} md={4}>
+        <Grid  md={4}>
           <Basket
             cartItemsone={cartItemsone}
             cartItemstwo={cartItemstwo}

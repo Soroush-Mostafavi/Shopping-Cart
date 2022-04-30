@@ -1,15 +1,13 @@
+import { Grid } from "@mui/material";
 import React from "react";
 
 import Sunpro from "./Sunpro";
 
-const Summer = ({onAddone,Suncloth }) => {
-
-
-
+const Summer = ({ onAddone, Suncloth }) => {
   return (
-    <main >
-      <h2 style={{ textAlign:"center" }}>Summer clothes
-</h2>
+<Grid sm={8} md={12}>
+  <div className="summer">
+  <h2 style={{ textAlign: "center" }}>Summer clothes</h2>
       <div className="result">
         {Suncloth.map((productone) => (
           <Sunpro
@@ -19,8 +17,12 @@ const Summer = ({onAddone,Suncloth }) => {
           />
         ))}
       </div>
-      ;
-    </main>
+  </div>
+
+</Grid>
+    
+     
+ 
   );
 };
 

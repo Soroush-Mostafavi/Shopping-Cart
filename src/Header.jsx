@@ -4,7 +4,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
@@ -32,9 +31,9 @@ const Search = styled('div')(({ theme }) => ({
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
-    width: '100%',
+    width: '50%',
     [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
+      marginLeft: theme.spacing(2),
       width: 'auto',
     },
   }));
@@ -114,7 +113,7 @@ const Header = () => {
         anchorEl={mobileMoreAnchorEl}
         anchorOrigin={{
           vertical: 'top',
-          horizontal: 'right',
+         
         }}
         id={mobileMenuId}
         keepMounted
@@ -169,8 +168,8 @@ const Header = () => {
     );
   const navigate = useNavigate();
     return (
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+      <Box className='navbar'  sx={{ flexGrow: 1 }}>
+        <AppBar position="static" >
           <Toolbar>
             <IconButton
               size="large"
@@ -180,12 +179,9 @@ const Header = () => {
               sx={{ mr: 2 }}
               onClick={() => navigate(-1)}
             >
-           <KeyboardBackspaceIcon/>
-          
+           <KeyboardBackspaceIcon/>          
             </IconButton>
-            
-      
-            < ArrowForwardIcon style={{cursor:"pointer"}} onClick={() => navigate(+1)} />
+            <IconButton>< ArrowForwardIcon style={{cursor:"pointer"}} onClick={() => navigate(+1)} /></IconButton>   
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />
@@ -198,10 +194,10 @@ const Header = () => {
             
             <Box sx={{ flexGrow: 1 }} />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <IconButton size="large" aria-label="show 4 new mails" color="inherit"><NavLink to="./summer"><WbSunnyIcon/></NavLink></IconButton>
-                <IconButton size="large" aria-label="show 4 new mails" color="inherit"><NavLink to="./winter"><AcUnitIcon/></NavLink></IconButton>
-                <IconButton size="large" aria-label="show 4 new mails" color="inherit"><NavLink to="./autmn"><ForestIcon/></NavLink></IconButton>
-                <IconButton size="large" aria-label="show 4 new mails" color="inherit"><NavLink to="./"><HomeIcon/></NavLink></IconButton>
+               <NavLink to="./summer"> <IconButton size="large" aria-label="show 4 new mails" color="inherit"><WbSunnyIcon/></IconButton></NavLink>
+               <NavLink to="./winter"> <IconButton size="large" aria-label="show 4 new mails" color="inherit"><AcUnitIcon/></IconButton></NavLink>
+               <NavLink to="./autmn"> <IconButton size="large" aria-label="show 4 new mails" color="inherit"><ForestIcon/></IconButton></NavLink>
+                <NavLink to="./">  <IconButton size="large" aria-label="show 4 new mails" color="inherit"><HomeIcon/></IconButton></NavLink>
               <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                 <Badge badgeContent={4} color="error">
                   <MailIcon />
@@ -227,17 +223,10 @@ const Header = () => {
                 color="inherit"
               >
                 <AccountCircle />
-                <Typography
-             
-             noWrap
-             component="div"
-             sx={{ display: { xs: 'none', sm: 'block' } }}
-           >
-             Soroush
-           </Typography>
+   
               </IconButton>
             </Box>
-            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+            <Box sx={{ display: { xs: 'flex', md: 'none' , sm:8 } }}>
               <IconButton
                 size="large"
                 aria-label="show more"

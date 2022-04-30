@@ -4,20 +4,19 @@ import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { green } from "@mui/material/colors";
-import { CardMedia } from "@mui/material";
+import { CardMedia} from "@mui/material";
 const Sunpro = ({ onAddone, productone }) => {
   return (
-    <div>
-      <Card className="card">
-      <CardMedia
-        component="img"
-        height="500"
-        image={productone.image}
-        alt={productone.name}
-      />
- 
+
+    <Card className="card">
+        <CardMedia
+          component="img"
+          height="500"
+          image={productone.image}
+          alt={productone.name}
+        />
 
         <CardContent style={{ height: "40px", textAlight: "center" }}>
           <Typography variant="body2" color="text.secondary">
@@ -39,7 +38,8 @@ const Sunpro = ({ onAddone, productone }) => {
           </IconButton>
         </CardActions>
       </Card>
-    </div>
+
+   
   );
 };
 
