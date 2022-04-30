@@ -226,7 +226,7 @@ const Header = () => {
    
               </IconButton>
             </Box>
-            <Box sx={{ display: { xs: 'flex', md: 'none' , sm:8 } }}>
+            <Box sx={{ display: { xs: 'flex', md: 'none'  } }}>
               <IconButton
                 size="large"
                 aria-label="show more"
